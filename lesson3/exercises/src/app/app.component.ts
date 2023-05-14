@@ -75,7 +75,16 @@ export class AppComponent {
     let movement = parseInt(image.style.bottom) - 10 + 'px';
     image.style.bottom = movement
   }
+  this.marginCheck(this.width, this.height)
 
  }
+
+ marginCheck(width, height) {
+  if (width > 260000 || width < 0 || height < 0 || height > 10080) {
+    this.color = 'orange';
+  } else {
+    this.color = 'blue';
+  }
+}
 
 }
